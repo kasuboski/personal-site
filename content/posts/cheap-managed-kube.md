@@ -15,13 +15,16 @@ We'll use [Terraform](https://www.terraform.io/) to make sure we have a repeatab
 
 If you just want to skip to the code it's on [GitHub](https://github.com/kasuboski/cheap-managed-kubernetes).
 
+## What we'll do
 The resources we'll deploy use the Google Cloud [free-tier](https://cloud.google.com/free/) extensively. If you leave it running, it should cost a little over $5 a month.
 
 If you're not familiar with Terraform or haven't used the Google Provider, you can get started [here](https://www.terraform.io/docs/providers/google/getting_started.html). All of the resources it deploys will be in the free tier.
 
 Terraform has a concept of remote backends which allow you to save the state of your deployments (not just on your machine). This is especially helpful if you have multiple team members.
 
-Since we're already using Google Cloud we can use Google Cloud Storage to house our state. Once change some defaults we can run a few commands and have our cluster running.
+Since we're already using Google Cloud we can use Google Cloud Storage to house our state. After changing some defaults we can run a few commands and have our cluster running.
+
+## Actually do it
 
 * Create a Google Cloud Storage Bucket following these [instructions](https://cloud.google.com/storage/docs/creating-buckets)
 * Clone the cheap-managed-kubernetes [repo](https://github.com/kasuboski/cheap-managed-kubernetes)
@@ -33,6 +36,9 @@ You should now be set up to deploy with Terraform. We'll initialize Terraform wi
 * `terraform init -backend-config=backend.hcl`
 * `terraform plan` This should say it will create a cluster and node pool.
 * `terraform apply` This will actually create the cluster and node pool.
+* When you're done `terraform destroy`
+
+## Using your cluster
 
 The output of the apply will give you the info you need to create a `kubeconfig` to be able to connect to your cluster. Since we're using GKE though, I find it easier to just use the `gcloud` command that will set your `kubeconfig` for you.
 

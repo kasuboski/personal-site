@@ -7,6 +7,17 @@ menu = "main"
 
 > A now page inspired by [Derek Sivers'](https://sivers.org/nowff)
 
-Currently working on Developer Productivity Tools at PNC.
+Currently working on developer productivity tools at PNC.
 
-In my free time I try to continue learning about all things.
+In my free time, I try to continue learning about all the things.
+
+My current interests are:
+* Decentralized Services
+* Self Hosting
+* Quantified Self
+* IndieWeb
+
+My Tech Setup is:
+* Pixel 3A
+* 2012 Macbook Pro Retina
+* Custom Desktop (Ryzen 5 1600, 16gb, 1060)

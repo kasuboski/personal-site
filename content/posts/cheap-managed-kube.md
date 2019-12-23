@@ -7,7 +7,9 @@ cover = "img/gcp-tf-kube.png"
 description = "Deploying a cheap kubernetes cluster on GKE with Terraform"
 +++
 
-Kubernetes is the way to deploy your services in a scalable and reliable way. However, it's a pretty complex system to manage yourself. Thankfully, cloud providers are offering managed versions where you only pay for the worker nodes.
+Kubernetes is a great way to deploy your services in a scalable and reliable way. However, it's a pretty complex system to manage yourself. Thankfully, cloud providers are offering managed versions where you only pay for the worker nodes.
+
+<!--more-->
 
 We'll use [GKE](https://cloud.google.com/kubernetes-engine/), Google's managed kubernetes offering, to deploy a cluster so we can test out kubernetes.
 

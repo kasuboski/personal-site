@@ -11,6 +11,8 @@ My name is Josh and I'm a software engineer. I work on all manner of things acro
 
 Right now, my main interest is improving the developer experience and making development more accessible to take code from laptop to production.
 
+This involves making pipelines, eliminating boilerplate, and sending messages to make sure it's painless to deploy your code.
+
 You can find me on [Github](https://github.com/kasuboski) or [LinkedIn](https://www.linkedin.com/in/joshkasuboski/)
 
 Here is a [resume](/resume.html)

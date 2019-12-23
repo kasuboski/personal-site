@@ -4,7 +4,3 @@
 [submodule "themes/indigo"]
 	path = themes/indigo
 	url = https://github.com/AngeloStavrow/indigo.git
-[submodule "public"]
-	path = public
-	url = git@github.com:kasuboski/kasuboski.github.io.git
-	branch = master

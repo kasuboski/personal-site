@@ -1,7 +1,7 @@
 +++
 draft = "false"
 title = "Cheap Managed Kubernetes with Terraform"
-date = "2019-04-18"
+date = "2019-04-18T14:15:59-06:00"
 author = "Josh"
 cover = "img/gcp-tf-kube.png"
 description = "Deploying a cheap kubernetes cluster on GKE with Terraform"

@@ -1,40 +1,42 @@
-baseurl = "/"
-languageCode = "en-us"
-theme = "terminal"
-paginate = 5
-
-enableEmoji = true
+baseURL = "https://joshkasuboski.com/"
+title = "Josh Kasuboski"
+copyright = "Copyright © 2019, Josh Kasuboski"
+languageCode = "en-US"
+theme = "indigo"
+paginate = 3
 
 [params]
-  # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
-  # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "green"
-  # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
-  # set theme to full screen width
-  fullWidthTheme = false
-  # center theme with default width
-  centerTheme = true
-  # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
+  Author = "Josh Kasuboski"
+  Description = "Josh Kasuboski's personal site"
+  Subtitle = ""
+  Avatar = "img/josh-scotland.jpg"
+  Biography = "Josh Kasuboski is currently interested in developer productivity. He works to make it easier for a developer to go from works on my laptop to rock solid in production."
+  ShowBio = true
+  PermalinkText = "🔗"
 
-[languages]
-  [languages.en]
-    title = "josh.kasuboski"
-    subtitle = "A software engineer"
-    keywords = ""
-    copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
+  # Contact/social-network identifiers for social icons
+  EmailAddress = "josh.kasuboski@gmail.com"
+  # FacebookUser = "FacebookUserName"
+  # FlickrUser = "FlickrUserName"
+  GitHubUser = "kasuboski"
+  # GitLabUser = "GitLabUserName"
+  # GlitchUser = "GlitchUserName"
+  # KeybaseUser = "KeybaseUserName"
+  LinkedInUser = "joshkasuboski"
+  # MediumUser = "MediumUserName"
+  # MicroBlogUser = "MicroBlogUserName"
+  # RedditUser = "RedditUserName"
+  # StackOverflowUser = "StackOverflowUserName"
+  # TumblrUser = "TumblrUserName"
+  # TwitterUser = "TwitterUserName"
 
-    [languages.en.params.logo]
-      logoText = "josh.kasuboski"
-      logoHomeLink = "/"
-
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
+  # These are parameters used for indieweb identity. You should set these along
+  # with the above email/social network parameters.
+  [params.indieWeb]
+    EmailAddress = "josh.kasuboski@gmail.com"
+    # FlickrUser = "FlickrUserName"
+    GitHubUser = "kasuboski"
+    # TwitterUser = "TwitterUserName"
+    # MicroBlogUser = "MicroBlogUserName"
+    Country = "United States"
+    City = "Austin"

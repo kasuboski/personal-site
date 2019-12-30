@@ -10,7 +10,7 @@
 	<style>
 	body {
   background: #EEEEEE;
-  font: 13px "Times New Roman", Times, sans-serif;
+  font: 12px "Times New Roman", Times, sans-serif;
   line-height: 1.4;
   margin: 40px 0;
 }
@@ -29,6 +29,7 @@ li {
 a {
   text-decoration: none;
 }
+
 #resume {
   margin: 0 auto;
   max-width: 600px;
@@ -38,45 +39,56 @@ a {
   box-shadow: 2px 2px 4px #aaa;
   -webkit-box-shadow: 2px 2px 4px #aaa;
 }
+
 .coursesList {
   width: 28%;
   vertical-align: top;
   display: inline-block;
 }
+
 .largeFont {
   font-size: 20px;
 }
+
 .smallFont {
-  font-size: 13px;
+  font-size: 12px;
 }
+
 .sectionBlock {
   display: flex;
   width: 100%;
 }
+
 .sectionName {
   width: 18%;
   vertical-align: top;
   display: inline-block;
 }
+
 .sectionContent {
   width: 80%;
   vertical-align: top;
   display: inline-block;
 }
+
 .sectionContent ul {
   padding-left: 20px;
   margin-top: 6px;
   list-style-type: circle;
 }
+
 .sectionContent .title {
   font-weight: bold;
 }
+
 .sectionContent .date {
   float: right;
 }
+
 .sectionContent .separator {
   height: 14px;
 }
+
 .sectionLine {
   border-style: dashed;
   border-width: 1px;
@@ -84,20 +96,25 @@ a {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 .divider {
   font-weight: bold;
   margin-left: 5px;
   margin-right: 5px;
 }
+
 .summary {
   margin-top: 6px;
 }
+
 .skillBlock {
   margin-bottom: 4px;
 }
+
 .jobBlock {
   page-break-inside: avoid;
 }
+
 /* Media Queries */
 @media only screen and (max-width: 40em) {
   body {
@@ -109,9 +126,6 @@ a {
     max-width: 600px;
     padding: 0.5em 1em;
     border: none;
-  }
-  .sectionBlock {
-    flex-direction: column;
   }
   .sectionContent {
     width: 100%;
@@ -129,10 +143,8 @@ a {
     font-size: 14px;
   }
 }
+
 @media print {
-  body {
-    background: #FFFFFF;
-  }
   #resume {
     margin: 0 auto;
     max-width: 600px;
@@ -142,10 +154,12 @@ a {
     box-shadow: none;
     -webkit-box-shadow: none;
   }
+
   a {
     color: black;
   }
 }
+
 	</style>
 
 	</head>
@@ -164,10 +178,14 @@ a {
       <span class='phone'>(920) 980-6586</span>
         <span class='divider'>|</span>
         <span class='address'>
-          Madison, Wisconsin, US
+          Austin, Texas, US
         </span>
     </div>
       <div id='profilesBlock'>
+            <span class='url'>
+              <a href='https://www.joshkasuboski.com'>https://www.joshkasuboski.com</a>
+            </span>
+            <span class='divider'>|</span>
             <span class='url'>
               <a href='https://github.com/kasuboski'>https://github.com/kasuboski</a>
             </span>
@@ -189,7 +207,7 @@ a {
 			<div class="jobBlock">
 	      <div class='blockHeader'>
 	        <span class='title'>
-	          PNC - Senior Technology Engineer
+	          PNC, Senior Technology Engineer
 	        </span>
 	        <span class='date'>
 	          March 2019 &mdash; current
@@ -197,16 +215,16 @@ a {
 	      </div>
 	      <div><a href=''></a></div>
 	      <ul class='highlights'>
-	        <li>Enabled declarative deploys for VMs and Containers</li>
-	        <li>Created continuous delivery pipelines with ArgoCD</li>
-	        <li>Developed Kubernetes GitOps strategy with Helm and Kustomize</li>
+	        <li>Enabled declarative deployments for VMs and Containers</li>
+	        <li>Developed Kubernetes GitOps strategy to enable safe and secure deploys for developers</li>
+	        <li>Simplified app pipeline setup down to adding a webhook to democratize continuous integration and delivery</li>
 	      </ul>
 	      <div class='separator'></div>
 			</div>
 			<div class="jobBlock">
 	      <div class='blockHeader'>
 	        <span class='title'>
-	          PNC - Technology Engineer
+	          PNC, Technology Engineer
 	        </span>
 	        <span class='date'>
 	          October 2017 &mdash; March 2019
@@ -216,14 +234,14 @@ a {
 	      <ul class='highlights'>
 	        <li>Architected and built new backend with Go microservices connected with gRPC and protocol buffers</li>
 	        <li>Redesigned IaaS platform to simplify concepts and APIs</li>
-	        <li>Built ReactJS site to expose IaaS offering</li>
+	        <li>Let ReactJS site development to expose IaaS offering</li>
 	      </ul>
 	      <div class='separator'></div>
 			</div>
 			<div class="jobBlock">
 	      <div class='blockHeader'>
 	        <span class='title'>
-	          Visa Inc. - Software Engineer
+	          Visa Inc., Software Engineer
 	        </span>
 	        <span class='date'>
 	          June 2016 &mdash; October 2017
@@ -242,7 +260,7 @@ a {
 			<div class="jobBlock">
 	      <div class='blockHeader'>
 	        <span class='title'>
-	          Maverick Software Consulting - Software Engineer Intern
+	          Maverick Software Consulting, Software Engineer Intern
 	        </span>
 	        <span class='date'>
 	          October 2014  &mdash;  May 2016
@@ -259,7 +277,7 @@ a {
 			<div class="jobBlock">
 	      <div class='blockHeader'>
 	        <span class='title'>
-	          Visa Inc. - Software Engineer Intern
+	          Visa Inc., Software Engineer Intern
 	        </span>
 	        <span class='date'>
 	          May 2015  &mdash;  August 2015

@@ -10,7 +10,7 @@ paginate = 3
   Description = "Josh Kasuboski's personal site"
   Subtitle = ""
   Avatar = "img/josh-scotland.jpg"
-  Biography = "Josh Kasuboski is currently interested in developer productivity. He works to make it easier for a developer to go from works on my laptop to rock solid in production."
+  Biography = "Josh Kasuboski is currently interested in developer productivity. He works to make it easier for a developer to take code from laptop to production."
   ShowBio = true
   PermalinkText = "🔗"
 

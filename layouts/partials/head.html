@@ -24,6 +24,8 @@
     <!-- IndieAuth endpoint -->
     <link rel="authorization_endpoint" href={{ .Site.Params.endpoints.Auth | default "https://indieauth.com/auth" }} />
     <link rel="token_endpoint" href={{ .Site.Params.endpoints.Token | default "https://tokens.indieauth.com/token" }} />
+    {{ with .Site.Params.endpoints.Microsub }}
+    <link rel="microsub" href="{{ . }}" />{{ end }}
     <!-- Other stuff to make the site work -->
     <link rel="stylesheet" href={{ "css/fonts.css" | absURL }} />
     <link rel="stylesheet" href={{ "css/style.css" | absURL }} />

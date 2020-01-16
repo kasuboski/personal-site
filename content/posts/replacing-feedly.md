@@ -1,16 +1,16 @@
 ---
-title: "Setting Up Microsub"
+title: "Replacing Feedly with Microsub?"
 description: "Trying to replace Feedly with an open source IndieWeb alternative"
 date: "2020-01-15T18:48:10-06:00"
 author: "Josh"
 draft: false
 ---
 
-I use [Feedly](https://feedly.com) to manage my content subscriptions. I subscribe to a number of bigger sites and personal blogs. I would like to move to an open source version so that I can customize my workflow and use the data in multiple places.
+I use [Feedly](https://feedly.com) to manage my content subscriptions, which include a number of bigger sites and personal blogs. Feedly is nice, but I would like to be able to save and use the data from there in other ways. So, I've been looking for an open source setup that I can tweak.
 
 <!--more-->
 
-I've been trying to utilize [IndieWeb](https://indieweb.org) pieces more and more. This site supports [IndieAuth](https://indieauth.com/) so I can login at supporting websites by giving my URL. The posts and contact card are also marked up with [microformat](http://microformats.org/) to be parseable.
+I've been trying to utilize [IndieWeb](https://indieweb.org) pieces more and more. Their [why](https://indieweb.org/why) really resonates with some of my frustrations with the current web (mainly auth and data ownership/portability). This site supports [IndieAuth](https://indieauth.com/) so I can login at supporting websites by giving my URL. The posts and contact card are also marked up with [microformat](http://microformats.org/) to be parseable.
 
 ## Experimenting with Aperture and Monocle
 I decided to use [Aperture](https://aperture.p3k.io/) for now as my [microsub](https://indieweb.org/Microsub) server. A microsub server is responsible for fetching the content you subscribe to and making it available in a common format for a microsub reader.

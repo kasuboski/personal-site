@@ -21,11 +21,14 @@
     <link rel="me" href="https://twitter.com/{{ . }}">{{ end }}
     {{ with .Site.Params.IndieWeb.MicroBlogUser }}
     <link rel="me" href="https://micro.blog/{{ . }}">{{ end }}
-    <!-- IndieAuth endpoint -->
+
+    <!-- IndieWeb endpoints -->
     <link rel="authorization_endpoint" href={{ .Site.Params.endpoints.Auth | default "https://indieauth.com/auth" }} />
     <link rel="token_endpoint" href={{ .Site.Params.endpoints.Token | default "https://tokens.indieauth.com/token" }} />
     {{ with .Site.Params.endpoints.Microsub }}
     <link rel="microsub" href="{{ . }}" />{{ end }}
+    <link rel="alternate home" type="application/rss+xml" href={{ "index.xml" | absURL }} />
+
     <!-- Other stuff to make the site work -->
     <link rel="stylesheet" href={{ "css/fonts.css" | absURL }} />
     <link rel="stylesheet" href={{ "css/style.css" | absURL }} />

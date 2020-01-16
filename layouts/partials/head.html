@@ -27,7 +27,7 @@
     <link rel="token_endpoint" href={{ .Site.Params.endpoints.Token | default "https://tokens.indieauth.com/token" }} />
     {{ with .Site.Params.endpoints.Microsub }}
     <link rel="microsub" href="{{ . }}" />{{ end }}
-    <link rel="alternate home" type="application/rss+xml" href={{ "index.xml" | absURL }} />
+    <link rel="alternate" type="application/rss+xml" href={{ "index.xml" | absURL }} />
 
     <!-- Other stuff to make the site work -->
     <link rel="stylesheet" href={{ "css/fonts.css" | absURL }} />

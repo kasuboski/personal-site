@@ -40,3 +40,6 @@ paginate = 3
     # MicroBlogUser = "MicroBlogUserName"
     Country = "United States"
     City = "Austin"
+
+  [params.endpoints]
+    Microsub = "https://aperture.p3k.io/microsub/465"

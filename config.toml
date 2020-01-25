@@ -4,6 +4,7 @@ copyright = "Copyright © 2020, Josh Kasuboski"
 languageCode = "en-US"
 theme = "indigo"
 paginate = 3
+enableEmoji = true
 
 [params]
   Author = "Josh Kasuboski"

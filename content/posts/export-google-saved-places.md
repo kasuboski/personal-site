@@ -3,7 +3,7 @@ title: "Exporting Google Saved Places"
 description: "An adventure in trying to get my saved places out of Google."
 author: "Josh"
 date: 2020-01-25T12:40:00-06:00
-draft: true
+draft: false
 ---
 
 I've made use of Google Saved Places for a while now. I have the standard "Starred", "Want to go", and "Favorites" lists as well as some specific to cities. Saved places is really convenient when you want to see places to go. I often look for want to go places to try something new or a favorite place if I can't quite remember the name of it.

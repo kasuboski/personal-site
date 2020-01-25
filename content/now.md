@@ -15,9 +15,9 @@ My current interests are:
 * Decentralized Services
 * Self Hosting
 * Quantified Self
-* IndieWeb
+* [IndieWeb](https://indieweb.org/)
 
 My Tech Setup is:
-* Pixel 3A
+* Pixel 3a
 * 2012 Macbook Pro Retina
 * Custom Desktop (Ryzen 5 1600, 16gb, 1060)

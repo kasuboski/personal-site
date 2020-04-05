@@ -9,7 +9,7 @@ menu = "main"
 
 Currently working on developer productivity tools at PNC.
 
-In my free time, I try to continue learning about all the things.
+In my free time, I try to continue learning about things.
 
 My current interests are:
 * Decentralized Services

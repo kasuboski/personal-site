@@ -30,3 +30,9 @@ jobs:
         EXTERNAL_REPOSITORY: kasuboski/kasuboski.github.io
         PUBLISH_BRANCH: master
         PUBLISH_DIR: ./public
+    
+    - name: Notify
+      if: always()
+      uses: wei/curl@v1
+      with:
+        args: -X POST -F 'token=${{ secrets.PUSHOVER_TOKEN }}' -F 'user=${{ secrets.PUSHOVER_USER }}' -F 'message=Personal Site Pipeline ${{ job.status }}'

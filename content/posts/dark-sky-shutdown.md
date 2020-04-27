@@ -8,6 +8,8 @@ draft: false
 
 Dark Sky is discontinuing their API and Android app after [joining Apple](https://blog.darksky.net/dark-sky-has-a-new-home/). It was my favorite weather app, both from a data and UX perspective. They apparently aggregate from many different sources to have the best predictions and world wide coverage. I'm not sure I actually need all of that and am curious to make my own solution.
 
+<!--more-->
+
 ## Making my own app
 This seems like a great opportunity to learn [Flutter](https://flutter.dev/). It's been a while since I've done mobile development. I did both native Android and iOS as well as React Native. I'm not too keen to be building two of everything and React Native was a tooling nightmare for me.
 

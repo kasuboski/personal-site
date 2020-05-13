@@ -11,7 +11,7 @@
             <p class="post-date no-margin-top">Posted on
                 <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
                 {{ .PublishDate.Format "2 January, 2006" }}
-                </time> {{ if $author }} by <a href="{{ .Site.BaseURL }}" class="p-author h-card" rel="author">{{ $author }}</a>{{ end }}
+                </time> {{ if $author }} by <a href="{{ .Site.BaseURL }}" class="p-author h-card" rel="author">{{ $author }}</a>{{ end }} · {{ .ReadingTime }}min read
             </p>
             {{ end }}
             {{ if .Params.categories }}

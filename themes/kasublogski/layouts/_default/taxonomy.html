@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+<!-- TODO: This probably doesn't work, but I don't have any taxonomies anyway -->
+<h2>
+  <span class="list-heading-type">{{ .Section }}:</span>
+  <span class="list-heading-tag">{{ .Title }}</span>
+</h2>
+
+<div id="content">
+  {{ range.Pages }}
+  {{ .Render "li" }}
+  {{ end }}
+</div>
+{{ partial "footer.html" . }}

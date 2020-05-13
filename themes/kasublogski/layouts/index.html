@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+      <!-- <section id="intro" class="margin-top-m padding-l">
+        <p><strong>I’m Josh</strong> and I'm a software engineer. Right now, my main interest is improving the developer
+          experience and making
+          development more accessible to take code from laptop to production.</p>
+        <p>You can check out more on the <a href="#">now</a> page.</p>
+      </section> -->
+      <section class="no-padding-left">
+        {{ range $index, $page := (.Paginate (where (where .Site.RegularPages "Type" "in" site.Params.mainSections) ".Params.hidden" "!=" "true" )).Pages }}
+        {{ if ne $index 0 }}
+        {{ end }}
+        {{ .Render "li" }}
+        {{ end }}
+        {{ partial "pagination.html" .Paginator }}
+      </section>
+{{ partial "footer.html" . }}

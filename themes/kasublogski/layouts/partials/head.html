@@ -1,0 +1,63 @@
+<head>
+  <meta charset="utf-8">
+  <!-- Site details -->
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="author" content="{{ .Site.Params.AuthorName }}">
+  <!-- IndieWeb identity -->
+  {{ with .Site.Params.IndieWeb.EmailAddress }}
+  <link rel="me" href="mailto:{{ . }}">{{ end }}
+  {{ with .Site.Params.IndieWeb.GitHubUser }}
+  <link rel="me" href="https://github.com/{{ . }}">{{ end }}
+  {{ with .Site.Params.IndieWeb.TwitterUser }}
+  <link rel="me" href="https://twitter.com/{{ . }}">{{ end }}
+  {{ with .Site.Params.IndieWeb.MicroBlogUser }}
+  <link rel="me" href="https://micro.blog/{{ . }}">{{ end }}
+  <!-- IndieAuth endpoint -->
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  <link rel="token_endpoint" href={{ .Site.Params.endpoints.Token | default "https://tokens.indieauth.com/token" }} />
+  {{ with .Site.Params.endpoints.Microsub }}
+  <link rel="microsub" href="{{ . }}" />{{ end }}
+  <link rel="alternate" type="application/rss+xml" href={{ "index.xml" | absURL }} />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/turretcss/dist/turretcss.min.css" crossorigin="anonymous">
+
+  <style>
+    /* Some of the custom colors taken from here
+      https://github.com/B-Software/Ward/blob/master/src/css/colors.css 
+    */
+    @media only screen and (min-width: 768px) {
+      :root {
+        font-size: 18px;
+      }
+    }
+
+    body {
+      background-color: #FAF9FA;
+    }
+
+    pre {
+      background-color: rgba(212, 242, 225, 1);
+    }
+
+    a {
+      text-decoration-color: rgba(89, 101, 249, 1);
+    }
+
+    #site-header {
+      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    #intro {
+      background-color: rgba(230, 232, 254, 1);
+    }
+
+    #social a {
+      color: transparent;
+      text-decoration: none;
+    }
+  </style>
+</head>

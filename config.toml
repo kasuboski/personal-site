@@ -2,7 +2,7 @@ baseURL = "https://www.joshkasuboski.com/"
 title = "Josh Kasuboski"
 copyright = "Copyright © 2020, Josh Kasuboski"
 languageCode = "en-US"
-theme = "indigo"
+theme = "kasublogski"
 paginate = 3
 enableEmoji = true
 

@@ -1,0 +1,30 @@
+</main>
+<footer class="container max-width-l margin-top-xl">
+  <div class="box-shadow-l padding-m">
+    <div class="h-card flex align-content-center">
+      <figure class="icon-xxl">
+        <img class="u-photo" src="{{ .Site.Params.Avatar | absURL }}" />
+      </figure>
+      <div class="margin-left-m">
+        <h3 class="display-title"><a class="u-url p-name text-decoration-none" href="{{ .Site.BaseURL }}">{{ .Site.Params.Author }}</a></h3>
+        <p>Living in Austin <img class="icon-xs" alt="texas" src={{ "img/texas.png" | absURL }} /> from <img class="icon-xs"
+            alt="wisconsin" src={{ "img/wisconsin.png" | absURL }} /></p>
+        <p id="social">
+          <a rel="me" class="u-url margin-right-xs" href="https://github.com/kasuboski">
+            <img class="icon-xs" src={{ "icons/github.svg" | absURL }} />
+          </a>
+          <a class="margin-right-xs" href="https://linkedin.com/kasuboski">
+            <img class="icon-xs" src={{ "icons/linkedin.svg" | absURL }} />
+          </a>
+          <a href="mailto:{{ .Site.Params.EmailAddress }}" class="u-email" rel="me">
+            <img class="icon-xs" src={{ "icons/envelope.svg" | absURL }} alt="email" />
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+
+</html>

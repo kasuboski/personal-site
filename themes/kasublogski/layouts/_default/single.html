@@ -1,0 +1,68 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL | sanitizeurl }}
+{{ $author := .Site.Params.Author }}
+{{ if .Params.Author }}
+    {{ $author = .Params.Author }}
+{{ end }}
+    <article class="h-entry">
+        <header>
+            <h1 class="display-title-xl no-margin-bottom post-title p-name">{{ .Title }}</h1>
+            {{ if not .Params.Menu }}
+            <p class="post-date no-margin-top">Posted on
+                <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+                {{ .PublishDate.Format "2 January, 2006" }}
+                </time> {{ if $author }} by <a href="{{ .Site.BaseURL }}" class="p-author h-card" rel="author">{{ $author }}</a>{{ end }}
+            </p>
+            {{ end }}
+            {{ if .Params.categories }}
+            <p class="post-tag">Category: 
+                {{ range .Params.categories }}
+                <a href="{{ $baseurl }}/categories/{{ . | urlize }}" class="post-tag p-category">{{ . }}</a>
+                {{ end }}
+            </p>
+            <hr class="post-underline">
+            {{ end }}
+        </header>
+        <section class="content e-content margin-top-l">
+            {{ .Content }}
+        </section>
+        <footer class="margin-top-m">
+            <a class="permalink u-url text-decoration-none" href="{{ .Permalink }}">{{ .Site.Params.PermalinkText }}</a>
+            {{ if .Params.tags }}
+            <hr class="post-underline">
+            <p class="post-tag">Tags for this post: 
+            {{ range .Params.tags }}
+                <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="post-tag p-category">{{ . }}</a>
+            {{ end }}
+            </p>
+            {{ end }}
+        </footer>
+    </article>
+    {{ if or (.NextPage) (.PrevPage) }}
+    <nav class="margin-top-l flex justify-content-space-around">
+        <div>
+            {{ with .NextInSection }}
+                <a alt="Newer article" href="{{ .Permalink }}">&larr; {{ .Title }}</a>
+            {{ end }}
+            <!-- {{ if and (.NextPage) (not .Params.Menu) }}
+            <a alt="Newer article" href="{{ .NextPage.Permalink }}">&larr; {{ .NextPage.Title }}</a>
+            {{ else }}
+            <p>&nbsp;</p>
+            {{ end }} -->
+        </div>
+        <div class="show-s-up">
+            <a alt="Top of page" href="#">Top</a>
+        </div>
+        <div>
+            {{ with .PrevInSection }}
+                <a alt="Older article" href="{{ .Permalink }}">{{ .Title}} &rarr;</a>
+            {{ end }}
+            <!-- {{ if and (.PrevPage) (not .Params.Menu) }}
+            <a alt="Older article" href="{{ .PrevPage.Permalink }}">{{ .PrevPage.Title}} &rarr;</a>
+            {{ else }}
+            <p>&nbsp;</p>
+            {{ end }} -->
+        </div>
+    </nav>
+    {{ end }}
+{{ partial "footer.html" . }}

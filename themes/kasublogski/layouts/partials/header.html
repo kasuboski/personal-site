@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+<body>
+  <div class="padding-bottom-s">
+    <header id="site-header">
+      <div class="container max-width-l flex-justify-center">
+        <h1><a class="text-decoration-none" href="{{ .Site.BaseURL }}"><small>{{ .Site.Title }}</small></a></h1>
+        {{ partial "pagenav.html" . }}
+      </div>
+    </header>
+    <main class="container max-width-l margin-top-l">

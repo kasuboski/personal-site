@@ -1,0 +1,16 @@
+<article class="margin-top-l">
+  <header>
+    {{ if .Title }}
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ end }}
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+        {{ .PublishDate.Format "2 January, 2006" }}
+      </time>
+  </header>
+  <p>
+    {{ .Summary | plainify | safeHTML }}
+  </p>
+  {{ if .Truncated }}
+  <p><a class="read-more" href="{{ .Permalink }}">Read More &rarr;</a></p>
+  {{ end }}
+</article>

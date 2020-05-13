@@ -1,0 +1,14 @@
+<nav>
+    <div id="pagination" class="margin-top-l flex justify-content-space-around">
+        {{if .HasPrev}}
+            <div>
+                <a alt="Newer articles" href="{{ .Prev.URL }}">&larr; Newer</a>
+            </div>
+        {{end}}
+        {{if .HasNext}}
+            <div>
+                <a alt="Older articles" href="{{ .Next.URL }}">Older &rarr;</a>
+            </div>
+        {{end}}
+    </div>
+</nav>

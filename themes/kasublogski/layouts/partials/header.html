@@ -4,8 +4,8 @@
 <body>
   <div class="padding-bottom-s">
     <header id="site-header">
-      <div class="container max-width-l flex-justify-center">
-        <h1><a class="text-decoration-none" href="{{ .Site.BaseURL }}"><small>{{ .Site.Title }}</small></a></h1>
+      <div class="container max-width-l flex-justify-center padding-vertical-xs">
+        <h1 class="no-margin-bottom"><a class="text-decoration-none flex align-items-center" href="{{ .Site.BaseURL }}"><img class="icon-s margin-right-xs" src={{ "images/jk-logo.svg" | absURL }} /><small>{{ .Site.Title }}</small></a></h1>
         {{ partial "pagenav.html" . }}
       </div>
     </header>

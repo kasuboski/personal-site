@@ -25,6 +25,8 @@ There was already a buildx action. The workflow ends up seemingly simple.
 
 That last part includes the platforms I would care about (for now). amd64 is for your run of the mill computer, arm/v7 being what is on my Pi thanks to 32-bit Raspbian, and arm64 being a potential if I switch the OS on my Pi.
 
+I did have to make a change to the repo other than just adding the workflow. The build step had the `GOARCH` variable set to `amd64`. This caused the build to always output an `amd64` binary, unsurprisingly. I realized this after two 16 minute builds...
+
 The workflow works well, but every run so far was between 14mins and 30mins... not exactly fast.
 
 ## Moving Forward

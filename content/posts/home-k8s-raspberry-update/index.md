@@ -13,7 +13,7 @@ In a previous [post]({{< ref "home-k8s-raspberry-pi.md" >}}), I put out my plan 
 
 I ended up with this set-up which is described in more detail below.
 
-{{< figure src="traffic-diagram.svg" link="traffic-diagram.svg" alt="Traffic Diagram" >}}
+{{< figure src="traffic-diagram.png" link="traffic-diagram.svg" alt="Traffic Diagram" >}}
 
 ## Hardware and Monitoring
 The cluster is set up with Raspbian Lite on 3 Raspberry Pi 4 4gb boards. Raspbian Lite seems to not support 64bit (yet) so I may be changing the operating system. The cluster has the monitoring stack from carlosedp's [repo](https://github.com/carlosedp/cluster-monitoring). I changed some things (mainly the ingress) in my forked [repo](https://github.com/kasuboski/cluster-monitoring).

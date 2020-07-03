@@ -43,4 +43,4 @@ enableEmoji = true
     City = "Austin"
 
   [params.endpoints]
-    Microsub = "https://aperture.p3k.io/microsub/465"
+    Microsub = "https://microsub.joshcorp.co/microsub"

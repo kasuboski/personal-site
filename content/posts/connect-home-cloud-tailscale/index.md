@@ -20,3 +20,5 @@ It's a [PyInfra deploy](https://pyinfra.com/) that basically just adds the packa
 
 ## Exposing to the internet
 My cluster ingress is now slightly different than described [here]({{< ref "home-k8s-raspberry-update" >}}). Traffic from the Linode now goes directly to the Kubernetes nodes on the port exposed by the nginx-ingress controller. This just removes the extra hop that was initially an internal haproxy running on a different Raspberry Pi.
+
+{{< figure src="tailscale-diagram.png" alt="Network Diagram" >}}

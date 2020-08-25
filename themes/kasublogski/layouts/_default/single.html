@@ -42,7 +42,9 @@
     <nav class="margin-top-l flex justify-content-space-around">
         <div>
             {{ with .NextInSection }}
+                {{ if not .Params.Menu}}
                 <a alt="Newer article" href="{{ .Permalink }}">&larr; {{ .Title }}</a>
+                {{ end }}
             {{ end }}
             <!-- {{ if and (.NextPage) (not .Params.Menu) }}
             <a alt="Newer article" href="{{ .NextPage.Permalink }}">&larr; {{ .NextPage.Title }}</a>
@@ -55,7 +57,9 @@
         </div>
         <div>
             {{ with .PrevInSection }}
+                {{ if not .Params.Menu}}
                 <a alt="Older article" href="{{ .Permalink }}">{{ .Title}} &rarr;</a>
+                {{ end }}
             {{ end }}
             <!-- {{ if and (.PrevPage) (not .Params.Menu) }}
             <a alt="Older article" href="{{ .PrevPage.Permalink }}">{{ .PrevPage.Title}} &rarr;</a>

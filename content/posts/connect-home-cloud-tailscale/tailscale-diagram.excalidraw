@@ -582,10 +582,10 @@
     {
       "id": "dQkeoPeLn0l-2fLM0EHVN",
       "type": "line",
-      "x": 998,
-      "y": 64,
-      "width": 1,
-      "height": 637,
+      "x": 998.9642366126645,
+      "y": 145.26552992979998,
+      "width": 0.4089952388405891,
+      "height": 439.5599983357358,
       "angle": 0,
       "strokeColor": "#000000",
       "backgroundColor": "transparent",
@@ -597,8 +597,8 @@
       "groupIds": [],
       "strokeSharpness": "round",
       "seed": 106585836,
-      "version": 40,
-      "versionNonce": 245206612,
+      "version": 102,
+      "versionNonce": 615874156,
       "isDeleted": false,
       "boundElementIds": null,
       "points": [
@@ -607,8 +607,8 @@
           0
         ],
         [
-          1,
-          637
+          -0.4089952388405891,
+          439.5599983357358
         ]
       ],
       "lastCommittedPoint": null,
@@ -618,8 +618,8 @@
     {
       "id": "tLIOl9fnzg4tzQ8_9QyHF",
       "type": "text",
-      "x": 885,
-      "y": 64.5,
+      "x": 892,
+      "y": 146.5,
       "width": 83,
       "height": 32,
       "angle": 0,
@@ -633,8 +633,8 @@
       "groupIds": [],
       "strokeSharpness": "sharp",
       "seed": 1375773652,
-      "version": 22,
-      "versionNonce": 736603884,
+      "version": 58,
+      "versionNonce": 1974826580,
       "isDeleted": false,
       "boundElementIds": null,
       "text": "Internet",
@@ -647,8 +647,8 @@
     {
       "id": "BhuKBu4Bb1lVg-Li82uG5",
       "type": "text",
-      "x": 1020,
-      "y": 63.5,
+      "x": 1027,
+      "y": 145.5,
       "width": 131,
       "height": 32,
       "angle": 0,
@@ -662,8 +662,8 @@
       "groupIds": [],
       "strokeSharpness": "sharp",
       "seed": 2003497324,
-      "version": 33,
-      "versionNonce": 975604716,
+      "version": 69,
+      "versionNonce": 54708460,
       "isDeleted": false,
       "boundElementIds": null,
       "text": "Home network",

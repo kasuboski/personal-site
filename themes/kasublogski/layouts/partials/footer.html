@@ -3,7 +3,7 @@
   <div class="box-shadow-l padding-m">
     <div class="h-card flex align-content-center">
       <figure class="icon-xxl">
-        <img class="u-photo" src="{{ .Site.Params.Avatar | absURL }}" />
+        <img alt="profile photo" class="u-photo" src="{{ .Site.Params.Avatar | absURL }}" />
       </figure>
       <div class="margin-left-m">
         <h3 class="display-title"><a class="u-url p-name text-decoration-none" href="{{ .Site.BaseURL }}">{{ .Site.Params.Author }}</a></h3>
@@ -11,10 +11,10 @@
             alt="wisconsin" src={{ "img/wisconsin.png" | absURL }} /></p>
         <p id="social">
           <a rel="me" class="u-url margin-right-xs" href="https://github.com/kasuboski">
-            <img class="icon-xs" src={{ "icons/github.svg" | absURL }} />
+            <img class="icon-xs" src={{ "icons/github.svg" | absURL }} alt="github" />
           </a>
           <a class="margin-right-xs" href="https://linkedin.com/kasuboski">
-            <img class="icon-xs" src={{ "icons/linkedin.svg" | absURL }} />
+            <img class="icon-xs" src={{ "icons/linkedin.svg" | absURL }} alt="linkedin" />
           </a>
           <a href="mailto:{{ .Site.Params.EmailAddress }}" class="u-email margin-right-xxs" rel="me">
             <img class="icon-xs" src={{ "icons/envelope.svg" | absURL }} alt="email" />

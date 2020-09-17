@@ -11,7 +11,7 @@ I wanted to add stats to a site, but I already capture them in a GitHub Repo. Le
 ## The Stats Repo
 I made a repo that pulls in stats ([kasuboski/stats](https://github.com/kasuboski/stats)). It uses a GitHub Action I made for a [Dev.to](https://dev.to/kasuboski/dev-to-article-stats-github-action-30n4) Hackathon that pulls post stats from Dev.to.
 
-The repo gets periodically updated with a `stats/dev-to.json` file. GitHub let's you browse the contents of files at `raw.githubusercontent.com`. In my case, this file is at [https://raw.githubusercontent.com/kasuboski/stats/main/stats/dev-to.json](https://raw.githubusercontent.com/kasuboski/stats/main/stats/dev-to.json).
+The repo gets periodically updated with a `stats/dev-to.json` file. GitHub lets you browse the contents of files at `raw.githubusercontent.com`. In my case, this file is at [https://raw.githubusercontent.com/kasuboski/stats/main/stats/dev-to.json](https://raw.githubusercontent.com/kasuboski/stats/main/stats/dev-to.json).
 
 ## Fetching the data
 I have a [landing page](https://joshcorp.co) served from my [Raspberry Pi Cluster]({{< ref "home-k8s-raspberry-update" >}}). It was a placeholder with a link to my [personal site](https://www.joshkasuboski.com). Now it also shows stats from my [Dev.to posts](https://dev.to/kasuboski).

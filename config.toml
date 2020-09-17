@@ -3,7 +3,7 @@ title = "Josh Kasuboski"
 copyright = "Copyright © 2020, Josh Kasuboski"
 languageCode = "en-US"
 theme = "kasublogski"
-paginate = 3
+paginate = 5
 enableEmoji = true
 
 [params]

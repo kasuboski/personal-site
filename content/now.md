@@ -21,3 +21,5 @@ My Tech Setup is:
 * Pixel 3a
 * 2012 Macbook Pro Retina
 * Custom Desktop (Ryzen 5 1600, 16gb, 1060)
+
+You can find more on my [kit.co profile](https://kit.co/kasuboski)

@@ -24,7 +24,7 @@ There doesn't seem to be an API to access your saved places. I had to resort to 
 
 Getting the data I wanted out of Takeout was a bit of trial and error. There are two options for Maps data as seen below, Maps and Maps (your places). Maps (your places) includes lists that aren't the starred list. Apparently, Google treats starred separately. I'm guessing this is because historically starred was the only option and was called saved. Another fun fact is that those starred places also show up at [Google Bookmarks](https://www.google.com/bookmarks).
 
-![](/img/maps-export-products.png)
+![export products](/img/maps-export-products.png)
 
 If you only want your starred places from Maps you'll want to select "All Maps data included" and select only "My labeled places". Running the export with the two maps options will get you a link to download a `.zip` file. Once extracted, you'll have a variety of folders. The important files are `Saved Places.json` and `*.csv`. 
 

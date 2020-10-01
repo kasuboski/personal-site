@@ -17,7 +17,7 @@ You can see my apps at [gitops/apps](https://github.com/kasuboski/k8s-gitops/tre
 
 ArgoCD also comes with a dashboard that shows the apps and their status. You can also get a badge to put in the repo to show overall status.
 
-![](https://argocd.joshcorp.co/api/badge?name=apps&revision=true)
+![argocd-badge](https://argocd.joshcorp.co/api/badge?name=apps&revision=true)
 
 {{< figure src="argo-dashboard.png" link="argo-dashboard.png" alt="The argo dashboard shows apps" width="800px" >}}
 

@@ -14,10 +14,10 @@
   {{ with .Site.Params.IndieWeb.MicroBlogUser }}
   <link rel="me" href="https://micro.blog/{{ . }}">{{ end }}
   <!-- IndieAuth endpoint -->
-  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  <link data-proofer-ignore rel="authorization_endpoint" href="https://indieauth.com/auth">
   <link rel="token_endpoint" href={{ .Site.Params.endpoints.Token | default "https://tokens.indieauth.com/token" }} />
   {{ with .Site.Params.endpoints.Microsub }}
-  <link rel="microsub" href="{{ . }}" />{{ end }}
+  <link data-proofer-ignore rel="microsub" href="{{ . }}" />{{ end }}
   <link rel="alternate" type="application/rss+xml" href={{ "index.xml" | absURL }} />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">

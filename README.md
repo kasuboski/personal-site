@@ -8,3 +8,7 @@ Uses [hugo](https://gohugo.io) with the in-tree kasublogski theme.
 
 ## Build
 `hugo`
+
+## Test
+Get [htmltest](https://github.com/wjdp/htmltest)
+`htmltest`

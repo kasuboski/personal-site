@@ -2,8 +2,6 @@ name: github pages
 
 on:
   push:
-    branches:
-    - master
     paths-ignore:
     - 'README.md'
 
@@ -34,6 +32,7 @@ jobs:
         bin/htmltest
 
     - name: Deploy
+      if: github.ref == 'ref/head/master'
       uses: peaceiris/actions-gh-pages@v3
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
@@ -43,7 +42,7 @@ jobs:
         keep_files: true
     
     - name: Notify
-      if: always()
+      if: github.ref == 'ref/head/master' && always()
       uses: wei/curl@v1
       with:
         args: -X POST -F 'token=${{ secrets.PUSHOVER_TOKEN }}' -F 'user=${{ secrets.PUSHOVER_USER }}' -F 'message=Personal Site Pipeline ${{ job.status }}' https://api.pushover.net/1/messages.json

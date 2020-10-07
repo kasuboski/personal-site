@@ -39,7 +39,7 @@ jobs:
         external_repository: kasuboski/kasuboski.github.io
         publish_branch: master
         publish_dir: ./public
-        keep_files: true
+        keep_files: false
     
     - name: Notify
       if: github.ref == 'refs/heads/master' && always()

@@ -32,7 +32,7 @@ jobs:
         bin/htmltest
 
     - name: Deploy
-      if: github.ref == 'ref/head/master'
+      if: github.ref == 'refs/heads/master'
       uses: peaceiris/actions-gh-pages@v3
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
@@ -42,7 +42,7 @@ jobs:
         keep_files: true
     
     - name: Notify
-      if: github.ref == 'ref/head/master' && always()
+      if: github.ref == 'refs/heads/master' && always()
       uses: wei/curl@v1
       with:
         args: -X POST -F 'token=${{ secrets.PUSHOVER_TOKEN }}' -F 'user=${{ secrets.PUSHOVER_USER }}' -F 'message=Personal Site Pipeline ${{ job.status }}' https://api.pushover.net/1/messages.json

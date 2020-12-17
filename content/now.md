@@ -18,7 +18,7 @@ My current interests are:
 * [IndieWeb](https://indieweb.org/)
 
 My Tech Setup is:
-* Pixel 3a
+* Pixel 4a
 * 2012 Macbook Pro Retina
 * Custom Desktop (Ryzen 5 1600, 16gb, 1060)
 

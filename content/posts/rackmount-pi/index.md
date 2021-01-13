@@ -16,7 +16,7 @@ My Raspberry PIs had been just sitting on a shelf in the server rack. They were 
 As mentioned in [server rack update]({{< ref "server-rack-2" >}}), I bought a [bracket](https://www.musicstore.de/de_DE/EUR/DAP-2-HE-Rackblende-f-Modulsystem-10-Segmente-MP-1/art-PAH0017160-000;pgid=WBtg67.syLdSRpoV6L_EAtys0000YDPT2oVh) from a random german store. Well it finally arrived, but then I had to actually get the mounts to put in.
 
 ## Mounting the PIs
-I had the `.stl` from [here](https://www.kaibader.de/3d-printed-raspberry-pi-rack-mount-with-heat-sink-passive-cooling/) printed using [makexyz.com](makexyz.com). It was pretty convenient and arrived in like a week. The actual quality of the print wasn't the greatest with some significant artifacts on the face.
+I had the `.stl` from [here](https://www.kaibader.de/3d-printed-raspberry-pi-rack-mount-with-heat-sink-passive-cooling/) printed using [makexyz.com](https://www.makexyz.com/). It was pretty convenient and arrived in like a week. The actual quality of the print wasn't the greatest with some significant artifacts on the face.
 
 After lining it up to the rack, I realized it was also too tall to align with the screw holes. On top of that, it seemed the holes in the bracket weren't actually tapped, so the included screws didn't fit.
 

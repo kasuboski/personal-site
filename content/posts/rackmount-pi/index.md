@@ -8,6 +8,8 @@ My stack of Raspberry PIs was getting a little tippy... A bracket from Germany a
 
 <!--more-->
 
+_There are affiliate links below that I may earn a commission from._
+
 ## Previously
 My Raspberry PIs had been just sitting on a shelf in the server rack. They were mounted together, but the stack of them would often slide around on the shelf. The stack can be seen below sitting on top of the switch. Getting the ethernet cables to cooperate in this orientation was not pretty.
 

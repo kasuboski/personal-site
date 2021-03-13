@@ -18,7 +18,7 @@ You need to place a button that when clicked calls the Stripe Javascript library
 ## Adding to Your Site
 I followed this [guide](https://stripe.com/docs/payments/checkout/client) from Stripe. It was a little difficult to find navigating the Stripe Docs, but searching Stripe Checkout without server brought me there.
 
-I won't reiterate the guide, but basically you use the Stripe Dashboard to make a Product that has a Price. That price will then have an ID that you need. The dashboard will also generate the code snippet with the price ID and your API ID filled in. My edited snipped is below.
+I won't reiterate the guide, but basically you use the Stripe Dashboard to make a Product that has a Price. That price will then have an ID that you need. The dashboard will also generate the code snippet with the price ID and your API ID filled in. My edited snippet is below.
 
 You'll notice it also expects a success and cancel URL. I added two pages that just say success, and uh oh respectively.
 

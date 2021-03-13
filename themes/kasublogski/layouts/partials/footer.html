@@ -20,11 +20,13 @@
           <a href="mailto:{{ .Site.Params.EmailAddress }}" class="u-email margin-right-xxs" rel="me">
             <img class="icon-xs" src={{ "icons/envelope.svg" | absURL }} alt="email" />
           </a>
-
-          <button class="button button-icon button-xs" style="background-color:transparent;padding:0;border:0;"
-            id="checkout-button-beermoney" role="link" type="button">
+          <a href="{{ ref . "payments.md" }}">
             <img class="icon-xs" src={{ "icons/beer-money-icon.svg" | absURL }} alt="beermoney" />
-          </button>
+          </a>
+
+          <!-- <button class="button button-icon button-xs" style="background-color:transparent;padding:0;border:0;" role="link" type="button">
+            <img class="icon-xs" src={{ "icons/beer-money-icon.svg" | absURL }} alt="beermoney" />
+          </button> -->
         </p>
       </div>
     </div>
@@ -32,42 +34,6 @@
 </footer>
 </div>
 {{ partial "analytics.html" . }}
-<script src="https://js.stripe.com/v3"></script>
-<script>
-  (function () {
-    var DOMAIN = 'https://www.joshkasuboski.com/';
-    var key = 'pk_live_51HJtKkASjDZJS9C9Ja9g6zTFbaTEdW7uCK2OTK1dq741RisoSBtSIac1QEMphVCEEkA7hTeuopkUsajAyWuyH7kT00cU4iVGfX';
-    var price = 'price_1HJtUTASjDZJS9C90kJjztUq';
-    // var price = 'price_1HJtbvASjDZJS9C9zEXKLAED';
-    // var key = 'pk_test_51HJtKkASjDZJS9C9e6Ig9IygOBnVvBXlD2WKjtXJZlNTQ4YNfKCHTVpAH4umFYq890xI1tZt4NlBD8vKmTbj2QUT00dCOT3QQT';
-    var stripe = Stripe(key);
-
-    var checkoutButton = document.getElementById('checkout-button-beermoney');
-    checkoutButton.addEventListener('click', function () {
-      // When the customer clicks on the button, redirect
-      // them to Checkout.
-      stripe.redirectToCheckout({
-        lineItems: [{ price: price, quantity: 1 }],
-        mode: 'payment',
-        // Do not rely on the redirect to the successUrl for fulfilling
-        // purchases, customers may not always reach the success_url after
-        // a successful payment.
-        // Instead use one of the strategies described in
-        // https://stripe.com/docs/payments/checkout/fulfillment
-        successUrl: DOMAIN + 'success',
-        cancelUrl: DOMAIN + 'canceled',
-      })
-        .then(function (result) {
-          if (result.error) {
-            // If `redirectToCheckout` fails due to a browser or network
-            // error, display the localized error message to your customer.
-            var displayError = document.getElementById('error-message');
-            displayError.textContent = result.error.message;
-          }
-        });
-    });
-  })();
-</script>
 </body>
 
 </html>

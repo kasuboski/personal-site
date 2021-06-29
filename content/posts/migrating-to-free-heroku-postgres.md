@@ -42,4 +42,4 @@ I still want to get my miniflux running elsewhere (or at least have the ability 
 
 I have been wanting to do something like [this](https://itnext.io/how-to-deploy-a-single-kubernetes-cluster-across-multiple-clouds-using-k3s-and-wireguard-a5ae176a6e81). I already run [tailscale](https://tailscale.com/) on all of my nodes so running the kubernetes control plane in the cloud with nodes spread about may be the perfect solution.
 
-You can see what my tailscale setup is like in [Connect Your Home to the Cloud with Tailscale]({{< ref "connect-home-cloud-tailscale.md" >}}). Oracle was currently out of capacity for ARM VMs, but hopefully I'll be able to provision soon.
+You can see what my tailscale setup is like in [Connect Your Home to the Cloud with Tailscale]({{< ref "connect-home-cloud-tailscale" >}}). Oracle was currently out of capacity for ARM VMs, but hopefully I'll be able to provision soon.

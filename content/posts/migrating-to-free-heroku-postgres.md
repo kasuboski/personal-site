@@ -9,7 +9,7 @@ I want to move my miniflux database to a managed service. Spoilers... it didn't 
 <!--more-->
 
 ## Current setup
-I currently have [miniflux](https://miniflux.app/) running in my [raspberry pi kubernetes cluster]({{< ref "home-k8s-raspberry-update.md" >}}). Miniflux requires a Postgresql database. I haven't had great experiences running persistent storage on the Raspberry Pis so I opted to run the database on my thinkcentre instead. It's running as a container and hasn't been an issue since.
+I currently have [miniflux](https://miniflux.app/) running in my [raspberry pi kubernetes cluster]({{< ref "home-k8s-raspberry-update" >}}). Miniflux requires a Postgresql database. I haven't had great experiences running persistent storage on the Raspberry Pis so I opted to run the database on my thinkcentre instead. It's running as a container and hasn't been an issue since.
 
 There have been times however, where I have broken my entire homelab. The power grid in Texas has also been less than reliable 🥶. It was rather annoying to be freezing and also not have access to my feed reader. Since I want my feed reader to be more available than my homelab permits, I'm naturally trying to extend to the cloud.
 

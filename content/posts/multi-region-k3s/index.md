@@ -18,12 +18,12 @@ I install [Tailscale](https://tailscale.com/) on all of the machines. This lets 
 
 The nodes are separated into a cloud and home region. Each region is broken down into zones for the cloud provider or location. That ends up cloud-oracle, cloud-racknerd, home-austin, home-wisconsin region-zone pairs. I'm then able to use those labels for scheduling decisions.
 
-So far I'm only using the zones for austin and wisconsin to pin my media options to the respective machines. Other things, including my RSS reader, are able to float between machines.
+So far I'm only using the zones for austin and wisconsin to pin my media options to the respective machines. Other things, including my RSS reader, are able to float between regions.
 
 ## The Setup
-The cluster is still managed with GitOps from the repo [kasuboski/k8s-gitops](https://github.com/kasuboski/k8s-gitops). I'm still using ArgoCD to apply the manifests, but might mess around with other options.
+The cluster is still managed with GitOps from the repo [kasuboski/k8s-gitops](https://github.com/kasuboski/k8s-gitops). I'm using ArgoCD to apply the manifests, but might mess with other options.
 
-I recently changed the secrets management from [SealedSecrets](https://github.com/bitnami-labs/sealed-secrets) to [Doppler](https://www.doppler.com/). There wasn't anything wrong with SealedSecrets, but it felt less magic since I had to make sure to manage the keys and reencrypt on changes. I have a script in `hack` in the repo that manages importing the correct Doppler project token. After created their `DopplerSecret` CRD, the secrets then just show up.
+I recently changed the secrets management from [SealedSecrets](https://github.com/bitnami-labs/sealed-secrets) to [Doppler](https://www.doppler.com/). There wasn't anything wrong with SealedSecrets, but it felt less magic since I had to make sure to manage the keys and reencrypt on changes. I have a script under `hack/` in the repo that manages importing the correct Doppler project token. After creating their `DopplerSecret` CRD, the secrets then just show up.
 
 Previously, I had run a separate VM to act as the entrypoint to the cluster. Now I use a loadbalancer from Oracle that points to the free ARM VM there. The DNS then points to this loadbalancer. I still want to add a separate ingress locally so I can avoid always going out and back in, but haven't gotten around to it.
 

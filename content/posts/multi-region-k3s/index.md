@@ -32,6 +32,6 @@ I also still have 4 Raspberry Pis that I haven't setup yet since moving. The gen
  {{< figure src="homelab.png" link="homelab.png" alt="Homelab Diagram" >}}
 
 ## Further Improvements
-I have a lot of the setup documented in [kasuboski/home-infra](https://github.com/kasuboski/home-infra), but realized as I was setting up the machine in Austin that it leaves a lot to be desired. In particular, the setup for storage had me looking back through the command history of the wisconsin machine to figure out what I had done.
+I have a lot of the setup documented in [kasuboski/home-infra](https://github.com/kasuboski/home-infra), but realized as I was setting up the machine in Austin that it leaves a lot to be desired. In particular, the setup for storage had me looking back through the command history of the Wisconsin machine to figure out what I had done.
 
 I'm thinking to make a tool that will set this up or at least walk me through it. The `home-infra` repo needs to be cleaned up a little as well. It still contains instructions for multiple past iterations of my homelab.

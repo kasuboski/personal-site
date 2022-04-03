@@ -22,7 +22,7 @@ I've been making a [feedreader](https://github.com/kasuboski/feedreader) to repl
 
 I haven't gotten around to figuring out users or authentication in the feedreader though. Despite this, it finally reached the point where I can use it as my main feedreader. However, I didn't exactly want an unauthenticated app hanging out on the internet for someone to ruin my day.
 
-If you don't want to make authentication, just make it inaccessible. This is where [Tailscale](https://tailscale.com/) comes in. I already run Tailscale on the all the nodes, which is how I'm able to have a [multi-region k3s cluster]({{< ref "multi-region-k3s" >}}). That doesn't make my pods routable though.
+If you don't want to make authentication, just make it inaccessible. This is where [Tailscale](https://tailscale.com/) comes in. I already run Tailscale on all the nodes, which is how I'm able to have a [multi-region k3s cluster]({{< ref "multi-region-k3s" >}}). That doesn't make my pods routable though.
 
 Tailscale has an option for a [subnet router](https://github.com/tailscale/tailscale/tree/main/docs/k8s#subnet-router) that is actually highlighted as how to access all things k8s in the examples. This probably would have been nice (and I might still add it), but I wouldn't automatically get dns routing I believe.
 

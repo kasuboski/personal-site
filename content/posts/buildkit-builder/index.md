@@ -19,7 +19,7 @@ Right as I was looking to run my own `buildkitd`, `buildx` had a PR merged that 
 Running a builder on it seemed like a great way to use the excess resources. Combined with `tailscale` and the recommended mTLS auth I could have a rather secure build runner on my existing infrastructure.
 
 ## Setting it up
-The [buildkit](https://github.com/moby/buildkit#expose-buildkit-as-a-tcp-service) repo as instructions for running it over TCP. There is also an [example](https://github.com/moby/buildkit/tree/master/examples/kubernetes#deployment--service) that shows how to run it in kubernetes with a deployment. I chose the deployment and service option vs a statefulset with consistent hashing because I was planning to use registry caching anyway and don't have immediate plans for many different builds to use this.
+The [buildkit](https://github.com/moby/buildkit#expose-buildkit-as-a-tcp-service) repo has instructions for running it over TCP. There is also an [example](https://github.com/moby/buildkit/tree/master/examples/kubernetes#deployment--service) that shows how to run it in kubernetes with a deployment. I chose the deployment and service option vs a statefulset with consistent hashing because I was planning to use registry caching anyway and don't have immediate plans for many different builds to use this.
 
 I decided to expose it with Tailscale using the same [process]({{< ref "tailscale-connect-kubernetes-pods.md" >}}) I had previously used for my feedreader. This means connecting to it requires you be on my tailnet (authenticated with Tailscale).
 
@@ -56,7 +56,7 @@ step certificate create client client.crt client.key \
 You'll notice the server has a `buildkitd` san, which is how I'll access it over Tailscale. The `local` ones were for testing while port forwarding to the cluster.
 
 ### Running the Server
-You can find the example kubernetes yaml [here](https://github.com/moby/buildkit/blob/master/examples/kubernetes/deployment%2Bservice.rootless.yaml). It expects a kubernete secret with `ca.pem` and `key.pem` keys. You can generate that from below.
+You can find the example kubernetes yaml [here](https://github.com/moby/buildkit/blob/master/examples/kubernetes/deployment%2Bservice.rootless.yaml). It expects a kubernetes secret with `ca.pem` and `key.pem` keys. You can generate that from below.
 
 ```bash
 kubectl create secret generic buildkit-daemon-certs --from-file=key.pem=buildkitd.key --from-file=ca.pem=root_ca.crt --dry-run=client -oyaml
@@ -79,16 +79,16 @@ buildctl --addr 'tcp://buildkitd:1234' \
 
 Building on multiple platforms with different builders requires `docker buildx`. The remote driver is on `master`, but isn't in a release yet. You can build buildx yourself to get access to that feature, but I only used it from Github Actions.
 
-The [setup buildx](https://github.com/docker/setup-buildx-action) has the option to build buildx from a specific commit.
+The [setup buildx action](https://github.com/docker/setup-buildx-action) has the option to build buildx from a specific commit.
 
 ### Running in Github Actions
 If you want to skip to the workflow it's at [kasuboski/feedreader](https://github.com/kasuboski/feedreader/blob/696debe2da1d26f1e4047806ff5e1f5ca5fbe347/.github/workflows/ci.yaml).
 
 The workflow will need secrets for Tailscale and the certificates. I use [Doppler](https://doppler.com/join?invite=390F66AC) _referral link_ to manage the secrets. It synced super fast and has a nicer interface than doing it per repo in Github imo.
 
-Tailscale has a Github Action that will install and set it up given an auth key. They support ephemeral auth keys so you want have a bunch of leftover machines in their system. Once installed, your workflow will have access to your tailneta and can reach `buildkitd`. It's worth noting DNS also magically works thanks to [Magic DNS](https://tailscale.com/kb/1081/magicdns/). Connecting to a kubernetes pod with a nice name and no other network setup is life changing.
+Tailscale has a Github Action that will install and set it up given an auth key. They support ephemeral auth keys so you won't have a bunch of leftover machines in their system. Once installed, your workflow will have access to your tailnet and can reach `buildkitd`. It's worth noting DNS magically works thanks to [Magic DNS](https://tailscale.com/kb/1081/magicdns/). Connecting to a kubernetes pod with a nice name and no other network setup is life changing.
 
-I had problems using the remote buildx driver with a different builder type. I ended up just running another `buildkitd` on the actions runner. In the future, I'd like to run a x86 builder on one of my nodes.
+I had problems using the remote buildx driver with a different builder type. I ended up just running another `buildkitd` on the actions runner. In the future, I'd like to run an x86 builder on one of my nodes.
 
 That's setup following inspiration from the buildx tests. This builder doesn't have mTLS setup, but I guess I'm fine for now since it's an ephemeral runner on Github's infrastructure 🤷‍♂️.
 

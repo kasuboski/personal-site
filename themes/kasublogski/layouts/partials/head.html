@@ -3,7 +3,9 @@
   <!-- Site details -->
   <title>{{ .Title }} | {{ .Site.Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <meta name="author" content="{{ .Site.Params.AuthorName }}">
+  <meta name="author" content="{{ .Site.Params.Author }}">
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/opengraph.html" . }}
   <!-- IndieWeb identity -->
   {{ with .Site.Params.IndieWeb.EmailAddress }}
   <link rel="me" href="mailto:{{ . }}">{{ end }}

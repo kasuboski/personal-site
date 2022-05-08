@@ -14,6 +14,7 @@ enableEmoji = true
   Biography = "Josh Kasuboski is currently interested in developer productivity. He works to make it easier for a developer to take code from laptop to production."
   ShowBio = true
   PermalinkText = "🔗"
+  Images = ["img/josh-scotland-full.jpg"]
 
   # Contact/social-network identifiers for social icons
   EmailAddress = "josh.kasuboski@gmail.com"

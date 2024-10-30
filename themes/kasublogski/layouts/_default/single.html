@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL | sanitizeurl }}
+{{ $baseurl := .Site.BaseURL | urlize }}
 {{ $author := .Site.Params.Author }}
 {{ if .Params.Author }}
     {{ $author = .Params.Author }}
@@ -38,7 +38,7 @@
             {{ end }}
         </footer>
     </article>
-    {{ if or (.NextPage) (.PrevPage) }}
+    {{ if or (.Next) (.Prev) }}
     <nav class="margin-top-l flex justify-content-space-around">
         <div>
             {{ with .NextInSection }}
@@ -46,11 +46,6 @@
                 <a alt="Newer article" href="{{ .Permalink }}">&larr; {{ .Title }}</a>
                 {{ end }}
             {{ end }}
-            <!-- {{ if and (.NextPage) (not .Params.Menu) }}
-            <a alt="Newer article" href="{{ .NextPage.Permalink }}">&larr; {{ .NextPage.Title }}</a>
-            {{ else }}
-            <p>&nbsp;</p>
-            {{ end }} -->
         </div>
         <div class="show-s-up">
             <a data-proofer-ignore alt="Top of page" href="#">Top</a>
@@ -61,11 +56,6 @@
                 <a alt="Older article" href="{{ .Permalink }}">{{ .Title}} &rarr;</a>
                 {{ end }}
             {{ end }}
-            <!-- {{ if and (.PrevPage) (not .Params.Menu) }}
-            <a alt="Older article" href="{{ .PrevPage.Permalink }}">{{ .PrevPage.Title}} &rarr;</a>
-            {{ else }}
-            <p>&nbsp;</p>
-            {{ end }} -->
         </div>
     </nav>
     {{ end }}

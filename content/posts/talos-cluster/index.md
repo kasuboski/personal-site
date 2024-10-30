@@ -23,6 +23,7 @@ I also moved my local ingress from an nginx ingress controller to the [envoy gat
 This let me run split dns where if you're on my network my domain routes to the envoy gateway, but from outside you are routed to the cloudflare tunnel. I had generally been too chicken to mess with that before as DNS is always the problem. Indeed I'm still not sure I have the correct setup on my Macbook where Tailscale MagicDNS likes to overwrite my settings.
 
 My home network DNS points to [k8s_gateway](https://github.com/ori-edge/k8s_gateway) running in the cluster that sets the records for the domain to be the MetalLB IP of the Envoy Gateway.
+[![talos architecture](talos-cluster.png)](talos-cluster.png)
 
 ## Hardware Changes
 I had stopped running my Raspberry PIs awhile ago as I didn't really have a use for them. Everything I needed to run was fine on just the mini PC or my NAS. Talos promises to make an HA control plane easier to manage though so I figured now's the time.
@@ -33,7 +34,7 @@ The Raspberry Pi worker is nice for various apps that don't need storage. For ex
 
 My free Oracle VM is still outside the cluster as I didn't want to deal with indirect connectivity while also learning about Talos. I may try and add it back in now. Talos has a [KubeSpan](https://www.talos.dev/v1.8/talos-guides/network/kubespan) feature that seems like it should make it fine. I am running the Tailscale extension on all of the nodes so far anyway so they should have connectivity.
 
-[![server rack](talos-cluster.png)](talos-cluster.png)
+{{< figure src="server-rack.jpg" link="server-rack.jpg" alt="Server rack" width="450px" >}}
 
 ## Templating Changes
 I switched the repo to use [Cuelang](https://cuelang.org/).

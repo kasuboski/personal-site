@@ -1,0 +1,32 @@
+# Core Blog Content
+- The main articles of the blog are located in `content/posts/`. Each subdirectory within `content/posts/` is typically a single blog post, often with an `index.md` file.
+- These files are primarily written in Markdown with a TOML or YAML front matter header.
+- Focus editing tasks on these files when working on blog posts.
+
+# Static Pages
+- Key static pages like the About page are in `content/about.md`.
+- The Now page, detailing current interests, is in `content/now.md`.
+- These are important content files but separate from the main blog posts.
+
+# Utility Pages
+- Pages related to site functionality, like payment success/cancel pages, are in `content/payments.md`, `content/success.md`, and `content/canceled.md`.
+- These pages are less likely to require frequent content updates compared to blog posts or key static pages.
+
+# Image Handling
+- Images for blog posts are often stored alongside the `index.md` file within the post's directory (Hugo Page Bundles).
+- Site-wide or shared images may be stored in the `static/` directory (e.g., `static/img/`). These are referenced with a leading slash, like `/img/image.png`.
+- Images can be referenced using standard Markdown syntax: `![Alt text](image-path.jpg)` or `[![Alt text](image-path.jpg)](link-path)`.
+- The site also uses the Hugo `figure` shortcode for images, which allows adding captions, links, and other attributes: `{{< figure src="image-path.png" link="image-link.png" alt="Description" width="500px" >}}`.
+- A cover image for a post is specified in the front matter: `cover = "img/cover-image.png"`. Ensure paths are correct when adding or modifying images.
+
+# Internal Linking
+- To link to another page within the site, especially other blog posts, use Hugo's `ref` or `relref` shortcodes.
+- The `ref` shortcode is generally preferred as it generates an absolute path from the site root.
+- Reference the target page by its path within the `content/` directory, usually omitting the `content/` prefix and the file extension (`.md`).
+- Example: Linking to `content/posts/stripe-beer-money/index.md` would use `{{< ref "posts/stripe-beer-money" >}}` or simply `{{< ref "stripe-beer-money" >}}` if the title/slug is unique enough.
+- Example usage seen in content: `{{< ref "stripe-beer-money" >}}` or `{{< ref "home-k8s-raspberry-update" >}}`.
+
+# General Site Structure
+- This is a Hugo static site. Content is written in Markdown files within the `content/` directory.
+- Unless explicitly requested to modify configuration, layouts, or static assets, confine all editing tasks to files within the `content/` directory.
+- Prioritize modifications to files in `content/posts/` and the key static pages (`about.md`, `now.md`) unless the request specifically targets other files.
